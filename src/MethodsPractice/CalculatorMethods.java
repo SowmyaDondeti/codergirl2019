@@ -41,6 +41,6 @@ public class CalculatorMethods {
     System.out.println("8 divided by 3 equals " + divide(8, 3));
     System.out.println("14 divided by 7 equals " + divide(14, 7));
     System.out.println("git test");
-    System.out.println("test o");
+   
   }
 }
