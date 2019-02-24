@@ -11,6 +11,7 @@ public class addingMachine {
 
     while (keepgoing) {
       Scanner keyboard = new Scanner(System.in);
+      System.out.print("add:");
       int add = keyboard.nextInt();
       total = total + add;
       System.out.println("total:" + total);
@@ -20,6 +21,6 @@ public class addingMachine {
         keepgoing = false;
       }
     }
-    System.out.println("you entered " + count + " numbers,for a final total of " + total);
+    System.out.println("you entered " + count + " numbers for a final total of " + total);
   }
 }
