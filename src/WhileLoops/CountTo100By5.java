@@ -1,6 +1,7 @@
 package WhileLoops;
 
-public class countTo100By5 {
+public class CountTo100By5
+{
   public static void main(String[] args) {
     boolean keepgoing = true;
     int count = 0;

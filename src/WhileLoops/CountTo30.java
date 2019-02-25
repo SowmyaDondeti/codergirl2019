@@ -1,6 +1,7 @@
 package WhileLoops;
 
-public class countTo30 {
+public class CountTo30
+{
   public static void main(String[] args) {
     int count = 0;
     boolean keepGoing = true;

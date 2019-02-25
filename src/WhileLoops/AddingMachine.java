@@ -2,7 +2,8 @@ package WhileLoops;
 
 import java.util.Scanner;
 
-public class addingMachine {
+public class AddingMachine
+{
   public static void main(String[] args) {
     boolean keepgoing = true;
     System.out.println("Welcome to adding machine!");

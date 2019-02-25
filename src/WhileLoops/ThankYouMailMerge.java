@@ -2,7 +2,8 @@ package WhileLoops;
 
 import java.util.Scanner;
 
-public class thankYouMailMerge {
+public class ThankYouMailMerge
+{
   public static void main(String[] args) {
     boolean keepGoing = true;
     System.out.println("----Thank You Letters---");

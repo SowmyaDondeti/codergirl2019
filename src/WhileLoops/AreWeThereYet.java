@@ -2,7 +2,8 @@ package WhileLoops;
 
 import java.util.Scanner;
 
-public class areWeThereYet {
+public class AreWeThereYet
+{
   public static void main(String[] args) {
     boolean keepGoing = true;
     while (keepGoing) {
