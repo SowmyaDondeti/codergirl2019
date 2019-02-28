@@ -9,7 +9,7 @@ public class AreWeThereYet
     while (keepGoing) {
       System.out.println("Are we there yet?");
       Scanner keyboard = new Scanner(System.in);
-      String decision = keyboard.nextLine();
+      String decision = keyboard.nextLine().toLowerCase();
       if (decision.equals("yes")) {
         keepGoing = false;
 
