@@ -12,12 +12,12 @@ public class AreWeThereYet
       String decision = keyboard.nextLine();
       if (decision.equals("yes")) {
         keepGoing = false;
-        System.out.println("Yay!");
-      } else if (decision.equals("no")) {
-        keepGoing = true;
-      } else {
+
+      } else if (!decision.equals("no")) {
+
         System.out.println("Huh i didn't understand.");
-      }
+
     }
   }
-}
+    System.out.println("Yay!");
+}}
