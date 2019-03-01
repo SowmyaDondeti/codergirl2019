@@ -11,7 +11,7 @@ public class ThankYouMailMerge
     do{
       System.out.println("Enter person name:");
       personName = keyboard.nextLine();
-      if (!personName.equals("quit")) {
+      if (!personName.toLowerCase().equals("quit")) {
         System.out.println("Enter donation amount");
         float amount = keyboard.nextFloat();
         keyboard.skip("\n");
@@ -27,7 +27,7 @@ public class ThankYouMailMerge
                         + "Sincerely, \nPaula Jones \nYourCharity.org");
       }
 
-    }while (!personName.equals("quit"));
+    }while (!personName.toLowerCase().equals("quit"));
 
   }
 }
