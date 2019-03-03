@@ -24,10 +24,11 @@ public class MultiplicationTablesGrid {
 
 }
   public static String pad(int x){
-      String s= new String();
+      String s;
       if (x<10) s="  "+x;
       else if (x<100) s=" "+x;
       else s=""+x;
       return s;
+
   }
 }
