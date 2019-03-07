@@ -6,11 +6,7 @@ public class MultiplicationTablesGrid {
       public static void main(String[] args) {
           Scanner keyboard = new Scanner(System.in);
           int number = keyboard.nextInt();
-          System.out.print("    ");
-          for (int i = 0; i <= number; i++) {
-              System.out.print(align(i) + " ");
-          }
-          System.out.println();
+          forLoop(number);
           System.out.print("    ");
           for (int i=0;i<=number;i++){
               System.out.print("    ");
@@ -35,5 +31,12 @@ public class MultiplicationTablesGrid {
               s = "" + x;
           }
           return s;
+      }
+      public static void forLoop(int number){
+          System.out.print("    ");
+          for (int i = 0; i <= number; i++) {
+              System.out.print(align(i) + " ");
+          }
+          System.out.println();
       }
 }

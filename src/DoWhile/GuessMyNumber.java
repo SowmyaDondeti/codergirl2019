@@ -11,7 +11,7 @@ public class GuessMyNumber {
     int guessNum = 0;
     do {
       if (startGame) {
-        guessNum = num.nextInt(100);
+        guessNum = num.nextInt(100)+1;
         System.out.println("I'm thinking of a number between 1 and 100. what is it?");
         startGame = false;
       }
