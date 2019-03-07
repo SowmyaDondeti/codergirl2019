@@ -5,37 +5,35 @@ import java.util.Scanner;
 
 public class GuessMyNumber {
   public static void main(String[] args) {
-    boolean startGame = true;
+    Scanner keyboard = new Scanner(System.in);
     Random num = new Random(2);
-    int number;
-    int guessNum = 0;
-    do {
-      if (startGame) {
-        guessNum = num.nextInt(100)+1;
-        System.out.println("I'm thinking of a number between 1 and 100. what is it?");
-        startGame = false;
-      }
 
-      Scanner keyboard = new Scanner(System.in);
+    do {
+
+      System.out.println("I'm thinking of a number between 1 and 100. what is it?");
+      int number = num.nextInt(100) + 1;
+      System.out.println("Hint: " + number);
+      boolean win = false;
+      do{
       System.out.print("Guess:");
-      number = keyboard.nextInt();
-      if (number < 1 || number > 100) {
+      int guess = keyboard.nextInt();
+      keyboard.skip("\n");
+      if (guess < 1 || guess > 100) {
         System.out.println("Oops! That number isn't between 1 and 100. Try again");
-      } else if (number > guessNum) {
+      } else if (guess > number) {
         System.out.println("My number is lower");
-      } else if (number < guessNum) {
+      } else if (guess < number) {
         System.out.println("My number is higher");
       } else {
-        System.out.println("you got it. my number was " + guessNum);
-        System.out.println("Play again?");
-        keyboard.skip("\n");
-        String userInput = keyboard.nextLine();
-        if (userInput.equals("yes")){
-            number = 0;
-            startGame = true;
-        }
+        win=true;
       }
+      }while (!win);
+        System.out.println("you got it. my number was " + number);
 
-    } while (number != guessNum);
+        System.out.println("Play again?");
+
+
+    } while (keyboard.nextLine().toLowerCase().contains("y"));
+    System.out.println("BYE");
   }
 }
