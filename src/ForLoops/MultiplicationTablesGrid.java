@@ -7,18 +7,8 @@ public class MultiplicationTablesGrid {
           Scanner keyboard = new Scanner(System.in);
           int number = keyboard.nextInt();
           forLoop(number);
-          System.out.print("    ");
-          for (int i=0;i<=number;i++){
-              System.out.print("    ");
-          }
-          System.out.println();
-          for (int i=0;i<=number;i++){
-              System.out.print(align(i)+" ");
-              for (int j=0;j<=number;j++){
-                  System.out.print(align(i*j)+" ");
-              }
-              System.out.println();
-          }
+          forLoop1(number);
+          forLoop3(number);
       }
 
       public static String align(int x) {
@@ -38,5 +28,21 @@ public class MultiplicationTablesGrid {
               System.out.print(align(i) + " ");
           }
           System.out.println();
+      }
+      public static void forLoop1(int number){
+          System.out.print("    ");
+          for (int i=0;i<=number;i++){
+              System.out.print("    ");
+          }
+          System.out.println();
+      }
+      public static void forLoop3(int number){
+          for (int i=0;i<=number;i++){
+              System.out.print(align(i)+" ");
+              for (int j=0;j<=number;j++){
+                  System.out.print(align(i*j)+" ");
+              }
+              System.out.println();
+          }
       }
 }
