@@ -10,7 +10,7 @@ public class ForLoops1 {
     for (int i=1;i<=input;i++){
       System.out.print(i+" ");
     }
-      System.out.println("\n");
+      System.out.println(" ");
     for (int i = input;i>=1;i--){
       System.out.print(i+" ");
     }
