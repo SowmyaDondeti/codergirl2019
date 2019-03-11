@@ -1,13 +1,13 @@
 package Arrays;
 public class NumberArrays {
   public static void main(String[] args) {
-    int week1_temp[] = {65, 68, 72, 83, 73, 66, 85};
-    int week2_temp[] = {86, 87, 85, 78, 79, 78, 80};
-    String week_day[]={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
+    int[] week1_temp = {65, 68, 72, 83, 73, 66, 85};
+    int[] week2_temp = {86, 87, 85, 78, 79, 78, 80};
+    String[] week_day={"Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"};
     average(week1_temp,week2_temp);
     warmest(week1_temp,week2_temp,week_day);
   }
-  public static void average(int week1_temp[],int week2_temp[]){
+  private static void average(int[] week1_temp,int[] week2_temp){
     int sum1 = 0;
     int sum2 = 0;
     for (int index = 0; index < week1_temp.length; index++) {
@@ -19,7 +19,7 @@ public class NumberArrays {
     System.out.println("The average daily high temperature for week1 is " + avg1);
     System.out.println("The average daily high temperature for week2 is " + avg2);
   }
-  public static void warmest(int week1_temp[],int week2_temp[],String week_day[]){
+  private static void warmest(int[] week1_temp,int[] week2_temp,String[] week_day){
     int big1 =0;
     int big2 =0;
     String day = "";
