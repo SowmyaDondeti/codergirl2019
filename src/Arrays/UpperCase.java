@@ -10,11 +10,9 @@ public class UpperCase
         char[] letter = message.toCharArray();
         for (int index=0;index<letter.length;index++){
             char character = letter[index];
-            int numbers = (int)character;
+              int numbers = (int)character;
             if (numbers>96){
                 numbers=numbers-32;
-            }else{
-                numbers =numbers;
             }
             char letter1 = (char)numbers;
             System.out.print(letter1);
