@@ -6,6 +6,7 @@ public class ForLoops2 {
   public static void main(String[] args) {
     int number;
     boolean keepGoing = true;
+    System.out.println("Welcome to Bar Chart");
     do {
       Scanner keyboard = new Scanner(System.in);
       System.out.print("number? ");
