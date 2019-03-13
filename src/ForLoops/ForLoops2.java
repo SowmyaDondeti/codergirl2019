@@ -12,9 +12,10 @@ public class ForLoops2 {
       number = keyboard.nextInt();
       if (number != 0) {
         barChart(number);
-        number = 0;
+
       } else {
         keepGoing = false;
+        System.out.println("Have a good day!");
       }
     } while (keepGoing);
   }
@@ -24,6 +25,6 @@ public class ForLoops2 {
     for (int i = 1; i <= number; i++) {
       System.out.print("#");
     }
-    System.out.println("");
+    System.out.println(" ");
   }
 }
