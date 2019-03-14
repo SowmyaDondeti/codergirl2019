@@ -8,7 +8,7 @@ public class MultiplicationTablesGrid {
           int number = keyboard.nextInt();
           row(number);
           rowAlign(number);
-          multiplication(number);
+         multiplication(number);
       }
 
       public static String align(int x) {
