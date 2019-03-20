@@ -33,6 +33,3 @@ public class Mario
     }
   }
 }
-// create # box
-// make loop create correct numbers of #,but backwards
-// use loop with spaces to turn pyramid correct direction
