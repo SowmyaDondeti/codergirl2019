@@ -21,7 +21,7 @@ public class Mario
   }
 
   public static void mario(int height) {
-      for (int i = 1; i < height+1; i++) {
+      for (int i = 1; i <= height; i++) {
           for(int j=(height-i); j>=0; j--)
           {
               System.out.print(" ");
