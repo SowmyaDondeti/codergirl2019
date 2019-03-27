@@ -11,61 +11,30 @@ public class Temperatures {
             {73, 72, 81, 78, 76, 73, 77},
             {64, 65, 69, 68, 70, 74, 72}
     };
-    int sum_of_7am = 0;
-    int sum_of_3pm = 0;
-    int sum_of_7pm = 0;
-    int sum_of_3am = 0;
-    int sum_of_sun = 0;
-    int sum_of_mon =0;
-    int sum_of_tue =0;
-    int sum_of_wed =0;
-    int sum_of_thu =0;
-    int sum_of_fri =0;
-    int sum_of_sat =0;
-    int sum_of_all_week = 0;
-    int count = 0;
+    String[] days = {"Sun","Mon","Tue","Wed","Thu","Fri","Sat"};
+    String[] times = {"7AM","3PM","7PM","3AM"};
+    int[] timeAvg = new int[4];
+    int[] dayAvg = new int[7];
+    int days_sum =0;
+    int count =0;
     for (int i = 0; i < temps.length; i++) {
       for (int j = 0; j < temps[0].length; j++) {
-        sum_of_all_week += temps[i][j];
+        days_sum+=temps[i][j];
         count++;
-        if (i == 0) {
-          sum_of_7am += temps[i][j];
-        }else if (i==1){
-          sum_of_3pm+=temps[i][j];
-        }else if (i==2){
-          sum_of_7pm+=temps[i][j];
-        }else{
-          sum_of_3am+=temps[i][j];
-        }
-        if (j==0){
-          sum_of_sun+=temps[i][j];
-        }else if (j==1){
-          sum_of_mon+=temps[i][j];
-        }else if (j==2){
-          sum_of_tue+=temps[i][j];
-        }else if (j==3){
-          sum_of_wed+=temps[i][j];
-        }else if (j==4){
-          sum_of_thu+=temps[i][j];
-        }else if (j==5){
-          sum_of_fri+=temps[i][j];
-        }else {
-          sum_of_sat+=temps[i][j];
-        }
+        timeAvg[i]+=temps[i][j];
+        dayAvg[j]+=temps[i][j];
+
       }
     }
-    System.out.println("Average of 7AM is: "+(sum_of_7am/temps[0].length));
-    System.out.println("Average of 3PM is: "+(sum_of_3pm/temps[1].length));
-    System.out.println("Average of 7PM is: "+(sum_of_7pm/temps[2].length));
-    System.out.println("Average of 3PM is: "+(sum_of_3am/temps[3].length)+"\n");
-    System.out.println("Average of Sun is: "+(sum_of_sun)/temps.length);
-    System.out.println("Average of Mon is: "+(sum_of_mon)/temps.length);
-    System.out.println("Average of Tue is: "+(sum_of_tue)/temps.length);
-    System.out.println("Average of Wed is: "+(sum_of_wed)/temps.length);
-    System.out.println("Average of Thu is: "+(sum_of_thu)/temps.length);
-    System.out.println("Average of Fri is: "+(sum_of_fri)/temps.length);
-    System.out.println("Average of Sat is: "+(sum_of_sat)/temps.length);
-    int avg_of_all_week = sum_of_all_week / count;
-    System.out.println("Average of whole week is : " + avg_of_all_week);
+    System.out.println("Average of whole week: "+days_sum/count);
+    for (int i=0;i<times.length;i++){
+    System.out.println(times[i]+" : "+(timeAvg[i])/temps[i].length);
+    }
+    for (int i=0;i<days.length;i++){
+    System.out.println(days[i]+" : "+ dayAvg[i]/temps.length);
+    }
+
+
+
   }
 }
