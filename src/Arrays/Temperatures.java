@@ -28,7 +28,7 @@ public class Temperatures {
     }
     System.out.println("Average of whole week: " + avg_of_week / count);
     for (int i = 0; i < times.length; i++) {
-      System.out.println(times[i] + " : " + (timesSum[i]) / temps[i].length);
+      System.out.println(times[i] + " : " + timesSum[i] / temps[i].length);
     }
     for (int i = 0; i < days.length; i++) {
       System.out.println(days[i] + " : " + daysSum[i] / temps.length);
