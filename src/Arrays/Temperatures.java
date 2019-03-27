@@ -14,24 +14,24 @@ public class Temperatures {
     };
     String[] days = {"Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"};
     String[] times = {"7AM", "3PM", "7PM", "3AM"};
-    int[] timeAvg = new int[4];
-    int[] dayAvg = new int[7];
-    int days_sum = 0;
+    int[] timesSum = new int[4];
+    int[] daysSum = new int[7];
+    int avg_of_week = 0;
     int count = 0;
     for (int i = 0; i < temps.length; i++) {
       for (int j = 0; j < temps[0].length; j++) {
-        days_sum += temps[i][j];
+        avg_of_week += temps[i][j];
         count++;
-        timeAvg[i] += temps[i][j];
-        dayAvg[j] += temps[i][j];
+        timesSum[i] += temps[i][j];
+        daysSum[j] += temps[i][j];
       }
     }
-    System.out.println("Average of whole week: " + days_sum / count);
+    System.out.println("Average of whole week: " + avg_of_week / count);
     for (int i = 0; i < times.length; i++) {
-      System.out.println(times[i] + " : " + (timeAvg[i]) / temps[i].length);
+      System.out.println(times[i] + " : " + (timesSum[i]) / temps[i].length);
     }
     for (int i = 0; i < days.length; i++) {
-      System.out.println(days[i] + " : " + dayAvg[i] / temps.length);
+      System.out.println(days[i] + " : " + daysSum[i] / temps.length);
     }
   }
 }
