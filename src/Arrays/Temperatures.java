@@ -21,6 +21,11 @@ public class Temperatures {
     int[] daysSum = new int[7];
     int sum_of_week = 0;
     int count = 0;
+    System.out.print("     ");
+    for (int j=0;j<days.length;j++){
+      System.out.print(days[j]+" ");
+    }
+    System.out.println();
     for (int i = 0; i < temps.length; i++) {
       System.out.print(times[i] + " : ");
       for (int j = 0; j < temps[0].length; j++) {
