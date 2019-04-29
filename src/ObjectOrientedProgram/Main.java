@@ -11,10 +11,10 @@ public class Main {
   static User currentUser = null;
   public static void main(String args[]) {
         createExistingUsersAndPosts();
-
-    while (true) {
+        int input;
+    do {
       printMainMenu();
-      int input = getUserSelection();
+       input = getUserSelection();
       keyboard.skip("\n");
       if (input == 1) {
         createUser();
@@ -23,25 +23,20 @@ public class Main {
         selectExistingUser();
       }
       if (input == 3){
-          if (currentUser == null){
-              currentUser = users.get(0);
-          }
-        System.out.println("Enter the content");
-          String content = keyboard.nextLine();
-        System.out.println("Enter the url");
-        String url = keyboard.nextLine();
-        Post newPost = new Post(currentUser,content,url);
-        postList.add(newPost);
-        for (Post post:postList){
-          System.out.println(post.toString());
-          System.out.println(" ");
-        }
+          creatingPostAsCurrentUser();
       }
-    }
+      if (input == 4){
+            printAllPosts();
+      }
+      if (input == 5){
+         printAllUsers();
+      }
+    }while (input!=0);
   }
+
   private static  void printMainMenu(){
     System.out.println(
-            "Main Menu \n1) Create a new user \n2) Become an existing user \n3) Create a post as the current user \n4) Print all posts \n5) Print all users \nWhat would you like to do?");
+            "Main Menu \n1) Create a new user \n2) Become an existing user \n3) Create a post as the current user \n4) Print all posts \n5) Print all users \n0) Quit \nWhat would you like to do?");
   }
   private static  int getUserSelection(){
     return keyboard.nextInt();
@@ -90,4 +85,35 @@ public class Main {
           }
       }
   }
+  private static void creatingPostAsCurrentUser(){
+      if (currentUser == null){
+          currentUser = users.get(0);
+      }
+      Post lastPost = null;
+      for (Post post:postList){
+          if (post.getUser().getUserName().equals(currentUser.getUserName())){
+              lastPost = post;
+          }
+      }
+    System.out.println(lastPost);
+      System.out.println("Enter the content");
+      String content = keyboard.nextLine();
+      System.out.println("Enter the url");
+      String url = keyboard.nextLine();
+      Post newPost = new Post(currentUser,content,url);
+      postList.add(newPost);
+  }
+  private static void printAllPosts(){
+      for (Post post:postList){
+          System.out.println(post.toString());
+          System.out.println(" ");
+      }
+  }
+  private static void printAllUsers(){
+      for (User user:users){
+          System.out.println(user.toString());
+          System.out.println(" ");
+      }
+  }
+
 }
