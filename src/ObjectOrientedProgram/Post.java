@@ -22,11 +22,56 @@ public class Post {
     this.url = url;
   }
 
-  public int getId() {
+    public static int getPostCounter()
+    {
+        return postCounter;
+    }
+
+    public static void setPostCounter(int postCounter)
+    {
+        Post.postCounter = postCounter;
+    }
+
+    public User getUser()
+    {
+        return user;
+    }
+
+    public void setUser(User user)
+    {
+        this.user = user;
+    }
+
+    public String getContent()
+    {
+        return content;
+    }
+
+    public void setContent(String content)
+    {
+        this.content = content;
+    }
+
+    public String getUrl()
+    {
+        return url;
+    }
+
+    public void setUrl(String url)
+    {
+        this.url = url;
+    }
+
+    public int getId() {
     return id;
   }
 
-  @Override
+    public void setId(int id)
+    {
+        this.id = id;
+    }
+
+    @Override
   public String toString() {
     return "Post number: "
         + this.id
