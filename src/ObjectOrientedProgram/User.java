@@ -61,4 +61,7 @@ public class User
     {
         this.email = email;
     }
+    public String toString(){
+        return "Avatar url:"+this.avatarUrl+"\nUserName:"+this.userName+"\nFirstName:"+this.firstName+"\nLastName:"+this.lastName+"\nEmail:"+this.email;
+    }
 }
