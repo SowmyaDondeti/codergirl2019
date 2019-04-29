@@ -9,28 +9,14 @@ public class Main {
   static List<Post> postList = new ArrayList<>();
   static  Scanner keyboard = new Scanner(System.in);
   static User currentUser = null;
+  static int input;
   public static void main(String args[]) {
         createExistingUsersAndPosts();
-        int input;
     do {
       printMainMenu();
        input = getUserSelection();
       keyboard.skip("\n");
-      if (input == 1) {
-        createUser();
-      }
-      if (input == 2) {
-        selectExistingUser();
-      }
-      if (input == 3){
-          creatingPostAsCurrentUser();
-      }
-      if (input == 4){
-            printAllPosts();
-      }
-      if (input == 5){
-         printAllUsers();
-      }
+      mainMenuOptions();
     }while (input!=0);
   }
 
@@ -57,13 +43,13 @@ public class Main {
       users.add(newUser);
   }
   private static void createExistingUsersAndPosts(){
-      User john = new User("url", "coolGuyJohn", "John", "Doe", "john@gmail.com");
-      users.add(john);
+      User manaswi = new User("url", "coolGirlManaswi", "Manaswi", "Nancy", "manaswi@gmail.com");
+      users.add(manaswi);
       User giri = new User("url1", "cuteGiri", "Giri", "M", "giri@hotmail.com");
       users.add(giri);
       User manish = new User("url2", "naughtyManish", "Manish", "Mani", "manish@yahoo.com");
       users.add(manish);
-      Post first = new Post(john, "My first post");
+      Post first = new Post(manaswi, "My first post");
       postList.add(first);
       Post second = new Post(giri, "My second post", "www.awesome.com");
       postList.add(second);
@@ -71,7 +57,7 @@ public class Main {
       postList.add(third);
       Post fourth = new Post(manish, "My fourth post", "www.google.com");
       postList.add(fourth);
-      Post fifth = new Post(john, "My fifth post", "www.gmail.com");
+      Post fifth = new Post(manaswi, "My fifth post", "www.gmail.com");
       postList.add(fifth);
   }
   private static void selectExistingUser(){
@@ -113,6 +99,23 @@ public class Main {
       for (User user:users){
           System.out.println(user.toString());
           System.out.println(" ");
+      }
+  }
+  private static void mainMenuOptions(){
+      if (input == 1) {
+          createUser();
+      }
+      if (input == 2) {
+          selectExistingUser();
+      }
+      if (input == 3){
+          creatingPostAsCurrentUser();
+      }
+      if (input == 4){
+          printAllPosts();
+      }
+      if (input == 5){
+          printAllUsers();
       }
   }
 
