@@ -1,4 +1,4 @@
-package Stitch;
+package stitch;
 
 public class Stitch
 {
