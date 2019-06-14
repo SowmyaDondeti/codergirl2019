@@ -1,19 +1,16 @@
 package com.company;
 
 
-import stitch.ShortLineStitch;
-import stitch.SmallCrossStitch;
-import stitch.Stitch;
+import pattern.*;
+
 
 public class Main {
 
     public static void main(String[] args) {
-        Stitch s = new Stitch();
-        Stitch sh = new ShortLineStitch();
-        Stitch sc = new SmallCrossStitch();
-        s.sew();
-        sh.sew();
-        sc.sew();
+        Pattern crossStitchWigglePattern = new CrossStitchWigglePattern(0.05);
+        Pattern brokenStitchWigglePattern = new CrossStitchWigglePattern( 0.40);
+        crossStitchWigglePattern.pattern();
+        brokenStitchWigglePattern.pattern();
 
     }
 }
