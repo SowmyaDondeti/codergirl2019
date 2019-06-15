@@ -5,11 +5,11 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-  static List<User> users = new ArrayList<>();
-  static List<Post> postList = new ArrayList<>();
-  static  Scanner keyboard = new Scanner(System.in);
-  static User currentUser = null;
-  static int input;
+ private static List<User> users = new ArrayList<>();
+  private static List<Post> postList = new ArrayList<>();
+ private static  Scanner keyboard = new Scanner(System.in);
+  private static User currentUser = null;
+  private static int input;
   public static void main(String args[]) {
         createExistingUsersAndPosts();
     do {
