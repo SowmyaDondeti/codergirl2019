@@ -20,13 +20,15 @@ public class CrossStitchWigglePattern extends Pattern
     public void pattern(){
         boolean needleJam = (Math.random() < needleJamRate);
         if (needleJam){
-      System.out.println("Needle Jammed");
+      for (int i=0;i<3;i++){
+          smallCrossStitch.sew();
+          largeCrossStitch.sew();
+      }
     } else {
       for (int i = 0; i < 5; i++) {
         smallCrossStitch.sew();
         largeCrossStitch.sew();
       }
-      System.out.println("\n");
     }
 
     }

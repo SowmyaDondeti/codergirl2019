@@ -13,7 +13,12 @@ public class BlockyBaublePattern extends Pattern
     public void pattern(){
         boolean needleJam = (Math.random() < 0.1d);
         if (needleJam){
-            System.out.println("Needle Jammed");
+            for (int i = 0; i < 2; i++) {
+                blockStitch.sew();
+                shortStitchLoop(shortLineStitch);
+                circleStitch.sew();
+                shortStitchLoop(shortLineStitch);
+            }
     } else {
       for (int i = 0; i < 3; i++) {
         blockStitch.sew();
@@ -28,4 +33,5 @@ public class BlockyBaublePattern extends Pattern
             type.sew();
         }
     }
+
 }
