@@ -1,14 +1,15 @@
 body{
 	width:100%;
-	background-color: #995;
+	background-color: Azure;
 	max-width: 1024px;
 	margin: 0 auto;
 	font-size: 62.5%;
+	border:2px solid white;
 }
 header,
 main,
 footer {
-	background-color: rgb(200 200 200);
+	background-color: Wheat;
 	font-size: 1.6em;
 }
 header {
@@ -44,6 +45,7 @@ p {
 	font-size: 16px;
 	padding: 1.25em;
 	text-align: left;
+	font-weight: bold;
 }
 
 figure {
